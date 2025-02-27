@@ -317,7 +317,7 @@ st.markdown("""
 ## About This Application
 
 This application evaluates quantum machine learning models created with PennyLane. 
-It specifically works with Quantum Approximate Unitary Models (QAUM) that use a single qubit 
+It specifically works with Quantum Asymptotically Universal Multi-feature (QAUM) Encoding, which uses a single qubit 
 for binary classification tasks.
 
 ### How to use:
