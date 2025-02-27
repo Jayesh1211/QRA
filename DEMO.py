@@ -121,7 +121,7 @@ def evaluate_model(test_df, model):
         'f1_score': f1
     }
     
-    return test_accuracy, conf_matrix, class_report, y_pred, metrics
+    return test_accuracy, conf_matrix, class_report, y_pred, metrics, y_test
 
 # Sidebar for file uploads
 st.sidebar.header("Upload Files")
