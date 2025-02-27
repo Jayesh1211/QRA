@@ -11,7 +11,7 @@ import os
 
 st.set_page_config(page_title="Quantum Model Evaluator", layout="wide")
 
-st.title("Quantum Approximate Unitary Model (QAUM) Evaluator")
+st.title("Quantum Asymptotically Universal Multi-feature(QAUM) Encoding")
 st.write("Upload your quantum model and test data to evaluate performance")
 
 # Define the quantum circuit and model
