@@ -393,12 +393,18 @@ eval_option = st.sidebar.radio(
 # Upload files section
 st.sidebar.header("Upload Files")
 
-# Upload QAUM model file
-qaum_model_file = st.sidebar.file_uploader("Upload QAUM Model (PKL file)", type="pkl", key="qaum_model")
+# Upload model files based on the selected evaluation option
+if eval_option in ["QAUM Model", "Compare Both Models"]:
+    # Upload QAUM model file
+    qaum_model_file = st.sidebar.file_uploader("Upload QAUM Model (PKL file)", type="pkl", key="qaum_model")
+else:
+    qaum_model_file = None
 
-# Upload QAOA model file if comparing or using QAOA
 if eval_option in ["QAOA Model", "Compare Both Models"]:
+    # Upload QAOA model file
     qaoa_model_file = st.sidebar.file_uploader("Upload QAOA Model (PKL file)", type="pkl", key="qaoa_model")
+else:
+    qaoa_model_file = None
 
 # Upload test data
 test_data_file = st.sidebar.file_uploader("Upload Test Data (CSV file)", type="csv")
