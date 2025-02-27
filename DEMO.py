@@ -166,7 +166,7 @@ if model_file and test_data_file:
         if st.button("Evaluate Model"):
             with st.spinner("Evaluating model... This may take a moment."):
                 # Evaluate the model
-                test_accuracy, conf_matrix, class_report, y_pred, metrics = evaluate_model(test_df, model)
+                test_accuracy, conf_matrix, class_report, y_pred, metrics, y_test = evaluate_model(test_df, model)
                 
                 # Display results
                 with results_container:
@@ -299,6 +299,7 @@ if model_file and test_data_file:
     
     except Exception as e:
         st.error(f"Error loading or evaluating model: {e}")
+        st.exception(e)  # This will show the full traceback for debugging
     
     # Clean up temp file
     os.unlink(tmp_model_path)
