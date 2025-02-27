@@ -154,16 +154,9 @@ if model_file and test_data_file:
             st.subheader("Model Information")
             st.write(f"Model Depth: {model['depth']}")
             #st.write(f"Number of Parameters: {len(model['weights'])}")
-
-
     # Calculate total number of parameters
-
             total_parameters = model['weights'].size  # This works if weights is a NumPy array
-
-    
-
-    # If weights is a list of arrays, use this instead:
-
+    # If weights is a list of arrays, use this instead
     # total_parameters = sum(len(w) for w in model['weights'])
 
     
